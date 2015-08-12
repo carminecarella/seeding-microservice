@@ -1,0 +1,4 @@
+dependencies {
+    testCompile "org.glassfish.jersey.core:jersey-client:${jerseyClientVersion}"
+    testCompile "org.glassfish.jersey.media:jersey-media-json-jackson:${jerseyJsonJacksonVersion}"
+}

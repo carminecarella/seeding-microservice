@@ -1,0 +1,36 @@
+apply plugin: 'spring-boot'
+
+jar.baseName = 'seeding-microservice'
+
+dependencies {
+	compile ("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+			{ exclude(module: 'spring-boot-starter-logging') }
+    compile ("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
+			{ exclude(module: 'spring-boot-starter-logging') }
+	compile project(':service')
+}
+
+buildscript {
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+task copyApplicationTask(type: org.gradle.api.tasks.Copy) {
+    from('build/libs') {
+        include '**/*.jar'
+    }
+    from('src/main/package')
+    into 'build/distributions/package'
+    dependsOn bootRepackage
+}
+
+task applicationPackage(type: Tar) {
+    from  'build/distributions/package'
+    baseName = jar.baseName + "-deploy"
+    dependsOn copyApplicationTask
+}
+
+task deployPackage() {
+    dependsOn applicationPackage
+}

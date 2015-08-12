@@ -1,0 +1,35 @@
+ext {
+    springBootVersion = "1.2.5.RELEASE"
+    jerseyClientVersion = "2.11"
+    jerseyJsonJacksonVersion = "2.11"
+    log4jVersion = "2.3"
+    junitVersion = "4.11"
+    festAssertionVersion = "2.0M10"
+}
+
+allprojects {
+    version = '1.0-SNAPSHOT'
+    group = 'com.carminecarella'
+}
+
+subprojects {
+    apply plugin: "java"
+
+	sourceCompatibility = 1.8
+
+	dependencies {
+        compile "org.apache.logging.log4j:log4j-core:${log4jVersion}"
+		testCompile "junit:junit:${junitVersion}"
+		testCompile "org.easytesting:fest-assert-core:${festAssertionVersion}"
+	}
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    buildscript {
+        repositories {
+            mavenLocal()
+            mavenCentral()
+        }
+    }
+}

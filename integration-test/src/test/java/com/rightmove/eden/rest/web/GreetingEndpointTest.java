@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 
-
+//TODO: change this test to use Rest Assured
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = {Application.class, ExternalConfiguration.class})
 @WebAppConfiguration
@@ -26,13 +26,8 @@ public class GreetingEndpointTest {
 	@Value("${local.server.port}")
 	private Integer serverPort;
 
-
-	@Value("${eden.test}")
-	private Boolean isEdenTestSet;
-
 	@Value("${greeting}")
 	private String greetingMessage;
-
 
 	private RestTemplate restTemplate = new TestRestTemplate();
 
@@ -41,13 +36,7 @@ public class GreetingEndpointTest {
 		Greeting greeting = restTemplate.getForEntity(
 				String.format("http://localhost:%d/greeting", serverPort),
 				Greeting.class).getBody();
-		assertThat(isEdenTestSet).isEqualTo(true);
 		assertThat(greeting.getMessage()).isEqualTo("Hello "+greetingMessage);
-	}
-
-	@Test
-	public void edenTestShouldBeSet(){
-		assertThat(isEdenTestSet).isTrue();
 	}
 
 }

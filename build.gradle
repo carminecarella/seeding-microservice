@@ -4,6 +4,7 @@ ext {
     jerseyJsonJacksonVersion = "2.11"
     log4jVersion = "2.3"
     junitVersion = "4.11"
+    //FEST-Assert provides a fluent interface for assertions
     festAssertionVersion = "2.0M10"
 }
 

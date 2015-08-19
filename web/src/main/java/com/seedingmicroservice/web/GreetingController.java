@@ -1,7 +1,7 @@
-package com.rightmove.eden.rest.web;
+package com.seedingmicroservice.web;
 
-import com.rightmove.eden.rest.service.greeting.Greeting;
-import com.rightmove.eden.rest.service.greeting.GreetingService;
+import com.seedingmicroservice.service.Greeting;
+import com.seedingmicroservice.service.GreetingService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

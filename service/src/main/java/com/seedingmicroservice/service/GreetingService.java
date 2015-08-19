@@ -1,4 +1,4 @@
-package com.rightmove.eden.rest.service.greeting;
+package com.seedingmicroservice.service;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

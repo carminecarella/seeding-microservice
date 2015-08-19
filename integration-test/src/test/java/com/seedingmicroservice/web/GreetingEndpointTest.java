@@ -1,9 +1,9 @@
-package com.rightmove.eden.rest.web;
+package com.seedingmicroservice.web;
 
 
-import com.rightmove.eden.rest.Application;
-import com.rightmove.eden.rest.ExternalConfiguration;
-import com.rightmove.eden.rest.service.greeting.Greeting;
+import com.seedingmicroservice.Application;
+import com.seedingmicroservice.ExternalConfiguration;
+import com.seedingmicroservice.service.Greeting;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;

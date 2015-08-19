@@ -1,4 +1,4 @@
-package com.rightmove.eden.rest.service.greeting;
+package com.seedingmicroservice.service;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.rightmove.eden.rest.web;
+package com.seedingmicroservice.web;
 
 import org.junit.Before;
 import org.junit.Ignore;

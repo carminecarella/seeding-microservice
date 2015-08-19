@@ -1,4 +1,4 @@
-package com.rightmove.eden.rest;
+package com.seedingmicroservice;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;

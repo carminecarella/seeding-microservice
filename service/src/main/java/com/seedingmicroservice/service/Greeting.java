@@ -1,4 +1,4 @@
-package com.rightmove.eden.rest.web;
+package com.seedingmicroservice.service;
 
 public class Greeting {
 	private String message;
@@ -10,4 +10,6 @@ public class Greeting {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
+
 }

@@ -1,4 +1,4 @@
-package com.rightmove.eden.rest;
+package com.seedingmicroservice;
 
 
 import org.apache.logging.log4j.LogManager;

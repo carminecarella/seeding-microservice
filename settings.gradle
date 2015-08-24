@@ -5,5 +5,3 @@ include 'web'
 include 'service'
 
 include 'integration-test'
-
-include 'acceptance-test'

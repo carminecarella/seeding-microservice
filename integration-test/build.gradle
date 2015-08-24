@@ -1,5 +1,6 @@
 dependencies {
     //spring-boot-starter-test provides Spring Test, JUnit, Hamcrest and Mockito dependencies.
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    testCompile "com.jayway.restassured:rest-assured:${restAssuredVersion}"
     testCompile project(':web')
 }

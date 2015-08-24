@@ -6,6 +6,7 @@ ext {
     junitVersion = "4.11"
     //FEST-Assert provides a fluent interface for assertions
     festAssertionVersion = "2.0M10"
+    restAssuredVersion = "2.4.0"
 }
 
 allprojects {
@@ -22,6 +23,9 @@ subprojects {
         compile "org.apache.logging.log4j:log4j-core:${log4jVersion}"
 		testCompile "junit:junit:${junitVersion}"
 		testCompile "org.easytesting:fest-assert-core:${festAssertionVersion}"
+
+//        testCompile "org.glassfish.jersey.core:jersey-client:${jerseyClientVersion}"
+//        testCompile "org.glassfish.jersey.media:jersey-media-json-jackson:${jerseyJsonJacksonVersion}"
 	}
     repositories {
         mavenLocal()

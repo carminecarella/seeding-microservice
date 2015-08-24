@@ -1,6 +1,7 @@
 package com.seedingmicroservice.service;
 
 public class Greeting {
+
 	private String message;
 
 	public String getMessage() {
@@ -10,6 +11,5 @@ public class Greeting {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
 
 }
